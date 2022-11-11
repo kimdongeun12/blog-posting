@@ -135,7 +135,7 @@ const Wrapper = styled.div`
     padding: 0 50px 80px;
     width: 640px;
     min-height: 100vh;
-    background: url('/02/bg.png') center/cover;
+    background: url('/destructuring/bg.png') center/cover;
 `
 const LogoWrap = styled.div`
     padding: 224px 0 144px;
@@ -147,7 +147,7 @@ const Logo = styled.h2`
     padding-top: 124px;
     font-size: 60px;
     color: #FFFFFF;
-    background: url('/02/marker.png') no-repeat top center/100px;
+    background: url('/destructuring/marker.png') no-repeat top center/100px;
 `
 const InputBox = styled.div`
     width: 100%;
@@ -172,7 +172,7 @@ const ClearBtn = styled.button`
     top: 50%;
     width: 20px;
     height: 20px;
-    background: url('/02/delete.png') center/cover;
+    background: url('/destructuring/delete.png') center/cover;
     text-indent: -9999px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -218,7 +218,7 @@ const KaKaoButton = styled.button`
         margin-right: 30px;
         width: 32px;
         height: 32px;
-        background: url('/02/kakaotalk.png') no-repeat center/contain;
+        background: url('/destructuring/kakaotalk.png') no-repeat center/contain;
     }
 `
 
