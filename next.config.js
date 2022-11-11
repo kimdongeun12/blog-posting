@@ -2,11 +2,11 @@
 
 // next.js gh-page css, img 셋팅
 const debug = process.env.NODE_ENV !== "production";
-const repository = "blog-posting-page";
+const repository = "blog-posting";
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/blog-posting',
+  // basePath: '/blog-posting',
   images: {
     loader: 'akamai',
     path: '',
