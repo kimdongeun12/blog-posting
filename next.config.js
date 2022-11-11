@@ -6,7 +6,6 @@ const repository = "blog-posting";
 
 const nextConfig = {
   reactStrictMode: true,
-  // basePath: '/blog-posting',
   images: {
     loader: 'akamai',
     path: '',

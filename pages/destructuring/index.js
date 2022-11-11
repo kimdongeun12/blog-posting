@@ -1,11 +1,14 @@
 import {useState} from 'react'
 import styled from '@emotion/styled'
+import { prefix } from '../../config/config';
 
 export default function inputPage() {
     // const [Email, setEmail] = useState('') // Email State 관리
     // const [Password, setPassword] = useState('') // Password State 관리
+    // const value = useContext(PostingContext);
+    // console.log(value)
+    const imgPrefix = prefix;
 
-    
     const RegEmailCheck = (value) => {
         // 이메일 체크 함수
         const EmailRegExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
@@ -90,9 +93,9 @@ export default function inputPage() {
 
     return (
         <>
-            <Wrapper>
+            <Wrapper imgPrefix={imgPrefix}>
                 <LogoWrap>
-                    <Logo>잇츠로드</Logo>
+                    <Logo imgPrefix={imgPrefix}>잇츠로드</Logo>
                 </LogoWrap>
                 <InputBox>
                     <InputWrap>
@@ -100,7 +103,7 @@ export default function inputPage() {
                         onChange={onChangeInput}
                         value={InputEmail}
                         />
-                        <ClearBtn onClick={onClickClear}>지우기</ClearBtn>
+                        <ClearBtn imgPrefix={imgPrefix} onClick={onClickClear}>지우기</ClearBtn>
                     </InputWrap>
                     <Error>{EmailMessage}</Error>
                 </InputBox>
@@ -110,7 +113,7 @@ export default function inputPage() {
                         onChange={onChangeInput}
                         value={InputPassword}
                         />
-                        <ClearBtn onClick={onClickClear}>지우기</ClearBtn>
+                        <ClearBtn imgPrefix={imgPrefix} onClick={onClickClear}>지우기</ClearBtn>
                     </InputWrap>
                     <Error>{PasswordMessage}</Error>
                 </InputBox>
@@ -123,7 +126,7 @@ export default function inputPage() {
                     <Link href=''>회원가입</Link>
                 </LinkWrap>
                 <ButtonWrap>
-                    <KaKaoButton>카카오톡으로 로그인</KaKaoButton>
+                    <KaKaoButton imgPrefix={imgPrefix}>카카오톡으로 로그인</KaKaoButton>
                 </ButtonWrap>
             </Wrapper>
         </>
@@ -135,7 +138,10 @@ const Wrapper = styled.div`
     padding: 0 50px 80px;
     width: 640px;
     min-height: 100vh;
-    background: url('/img_destructuring/bg.png') center/cover;
+    background-image: ${(props) => `url(${props.imgPrefix}/img_destructuring/bg.png)`};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 `
 const LogoWrap = styled.div`
     padding: 224px 0 144px;
@@ -147,7 +153,9 @@ const Logo = styled.h2`
     padding-top: 124px;
     font-size: 60px;
     color: #FFFFFF;
-    background: url('/img_destructuring/marker.png') no-repeat top center/100px;
+    background-image: ${(props) => `url(${props.imgPrefix}/img_destructuring/marker.png)`};
+    background-repeat: no-repeat;
+    background-position: top center;
 `
 const InputBox = styled.div`
     width: 100%;
@@ -172,7 +180,10 @@ const ClearBtn = styled.button`
     top: 50%;
     width: 20px;
     height: 20px;
-    background: url('/img_destructuring/delete.png') center/cover;
+    background-image: ${(props) => `url(${props.imgPrefix}/img_destructuring/delete.png)`};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-indent: -9999px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -218,7 +229,10 @@ const KaKaoButton = styled.button`
         margin-right: 30px;
         width: 32px;
         height: 32px;
-        background: url('/img_destructuring/kakaotalk.png') no-repeat center/contain;
+        background-image: ${(props) => `url(${props.imgPrefix}/img_destructuring/kakaotalk.png)`};
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 `
 
