@@ -8,7 +8,7 @@ export default function inputPage() {
     // const value = useContext(PostingContext);
     // console.log(value)
     const imgPrefix = prefix;
-    // 푸쉬 되돌리기 실험
+
     const RegEmailCheck = (value) => {
         // 이메일 체크 함수
         const EmailRegExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
